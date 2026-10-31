@@ -75,9 +75,23 @@ loadMoodboard();
  location.href='mailto:'+encodeURIComponent(email)+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(rows.join('\n'));
  byId('rsvp-feedback').textContent='Dein E-Mail-Programm wurde geöffnet. Bitte die Nachricht dort absenden – erst dann erhält Julia deine Antwort.';
  });
- if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
- const obs=new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('appeared');obs.unobserve(x.target)}}),{threshold:.08});
- document.querySelectorAll(
+
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appeared');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+
+document.querySelectorAll(
   '.letter,.details,.quote-section,.dress,.mood,.rsvp'
-)
+).forEach(el => {
+  el.classList.add('reveal');
+  obs.observe(el);
+});
+
 })();
