@@ -13,3 +13,14 @@
   height: 100%;
   object-fit: cover;
 }
+
+
+/* Temporärer Test: Moodboard immer sichtbar */
+.mood,
+.mood.reveal,
+.gallery-item,
+.gallery-item.reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
