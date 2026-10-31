@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-10-31T16:38:47.760Z",
+  "exportMode": "single",
+  "part": {
+    "number": 1,
+    "count": 1,
+    "firstItem": 1,
+    "lastItem": 105
+  },
+  "board": {
+    "name": "Birthday Aesthetic",
+    "url": "https://de.pinterest.com/juulreim/birthday-aesthetic/",
+    "id": ""
+  },
+  "scan": {
+    "expectedCount": 0,
+    "collectedCount": 105,
+    "missingCount": 0,
+    "finalDomPinCount": 26,
+    "stoppedAtRecommendationBoundary": false,
+    "boardUrl": "https://de.pinterest.com/juulreim/birthday-aesthetic/"
+  },
+  "results": {
+    "requestedCount": 105,
+    "downloadedCount": 105,
+    "failedCount": 0
+  },
+  "failures": []
+}
