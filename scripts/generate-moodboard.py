@@ -9,7 +9,7 @@ extensions = {".jpg", ".jpeg", ".png", ".webp", ".avif"}
 
 images = sorted(
     (
-        f"/assets/moodboard/{file.name}"
+        f"assets/moodboard/{file.name}"
         for file in folder.iterdir()
         if file.is_file() and file.suffix.lower() in extensions
     ),
