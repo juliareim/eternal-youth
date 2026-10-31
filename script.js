@@ -28,7 +28,7 @@ async function loadMoodboard() {
         'gallery-item ' + (index % 4 === 0 ? 'square' : 'portrait');
 
       const img = document.createElement('img');
-      img.src = image;
+      img.src = new URL(image, document.baseURI).href;
       img.alt = 'Vampirische Inspiration';
       img.loading = 'lazy';
 
